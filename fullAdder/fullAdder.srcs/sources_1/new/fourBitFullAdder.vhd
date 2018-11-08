@@ -34,7 +34,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity fourBitFullAdder is
     Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
            B : in STD_LOGIC_VECTOR (3 downto 0);
-           Cin : in STD_LOGIC;
            Z : out STD_LOGIC_VECTOR (3 downto 0);
            Cout : out STD_LOGIC);
 end fourBitFullAdder;
@@ -58,7 +57,7 @@ begin
     adder0 : fullAdder Port map(
         A => A(0),
         B => B(0),
-        Cin => Cin,
+        Cin => '0',
         Z => Z(0),
         Cout =>  C0
     );
