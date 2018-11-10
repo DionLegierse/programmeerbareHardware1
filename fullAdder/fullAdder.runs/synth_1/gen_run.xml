@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1541707234">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1541750588">
   <File Type="PA-TCL" Name="fourBitFullAdder.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="fourBitFullAdder_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="fourBitFullAdder_reports.tcl"/>

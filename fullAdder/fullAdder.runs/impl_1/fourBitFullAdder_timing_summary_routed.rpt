@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Nov  8 21:02:17 2018
-| Host         : DESKTOP-24KCCOQ running 64-bit major release  (build 9200)
+| Date         : Fri Nov  9 09:04:50 2018
+| Host         : LAPTOP-MCELIKGK running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file fourBitFullAdder_timing_summary_routed.rpt -rpx fourBitFullAdder_timing_summary_routed.rpx -warn_on_violation
 | Design       : fourBitFullAdder
 | Device       : 7a35t-cpg236

@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Nov  7 19:26:20 2018
-# Process ID: 14332
-# Current directory: F:/programmeerbareHardware1/blinky/blinky.runs/impl_1
+# Start of session at: Thu Nov  8 23:47:35 2018
+# Process ID: 10916
+# Current directory: C:/Users/djleg/Documents/programmeerbareHardware1/blinky/blinky.runs/impl_1
 # Command line: vivado.exe -log blinky.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source blinky.tcl -notrace
-# Log file: F:/programmeerbareHardware1/blinky/blinky.runs/impl_1/blinky.vdi
-# Journal file: F:/programmeerbareHardware1/blinky/blinky.runs/impl_1\vivado.jou
+# Log file: C:/Users/djleg/Documents/programmeerbareHardware1/blinky/blinky.runs/impl_1/blinky.vdi
+# Journal file: C:/Users/djleg/Documents/programmeerbareHardware1/blinky/blinky.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source blinky.tcl -notrace

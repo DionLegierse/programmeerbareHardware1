@@ -60,22 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/djleg/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15900-LAPTOP-MCELIKGK/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir F:/programmeerbareHardware1/fullAdder/fullAdder.cache/wt [current_project]
-  set_property parent.project_path F:/programmeerbareHardware1/fullAdder/fullAdder.xpr [current_project]
-  set_property ip_output_repo F:/programmeerbareHardware1/fullAdder/fullAdder.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.cache/wt [current_project]
+  set_property parent.project_path C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.xpr [current_project]
+  set_property ip_output_repo C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet F:/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1/fourBitFullAdder.dcp
-  read_xdc F:/programmeerbareHardware1/fullAdder/fullAdder.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc
+  add_files -quiet C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1/fourBitFullAdder.dcp
+  read_xdc C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc
   link_design -top fourBitFullAdder -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

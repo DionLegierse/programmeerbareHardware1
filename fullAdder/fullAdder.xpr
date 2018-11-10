@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="F:/programmeerbareHardware1/fullAdder/fullAdder.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="24875193dbce43029aad3275c3cf989f"/>

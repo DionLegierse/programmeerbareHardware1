@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Nov  8 21:00:36 2018
-# Process ID: 8480
-# Current directory: F:/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1
+# Start of session at: Fri Nov  9 09:03:10 2018
+# Process ID: 2784
+# Current directory: C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1
 # Command line: vivado.exe -log fourBitFullAdder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fourBitFullAdder.tcl
-# Log file: F:/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1/fourBitFullAdder.vds
-# Journal file: F:/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1\vivado.jou
+# Log file: C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1/fourBitFullAdder.vds
+# Journal file: C:/Users/djleg/Documents/programmeerbareHardware1/fullAdder/fullAdder.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source fourBitFullAdder.tcl -notrace
