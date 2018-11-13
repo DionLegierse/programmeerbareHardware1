@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Nov 13 18:18:25 2018
+# Process ID: 1484
+# Current directory: F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/synth_1
+# Command line: vivado.exe -log fourBitAdderTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fourBitAdderTop.tcl
+# Log file: F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/synth_1/fourBitAdderTop.vds
+# Journal file: F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fourBitAdderTop.tcl -notrace
+Command: synth_design -top fourBitAdderTop -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2836 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 361.156 ; gain = 99.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fourBitAdderTop' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'fourBitFullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:41]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:34' bound to instance 'adder0' of component 'fullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'fullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'fullAdder' (1#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:42]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:34' bound to instance 'adder1' of component 'fullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:65]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:34' bound to instance 'adder2' of component 'fullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:73]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd:34' bound to instance 'adder3' of component 'fullAdder' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'fourBitFullAdder' (2#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'binToBCD' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/binToBCD.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'binToBCD' (3#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/binToBCD.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'segmentMux' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/segmentMux.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'segmentMux' (4#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/segmentMux.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'bcdToSeg' [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'bcdToSeg' (5#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'fourBitAdderTop' (6#1) [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd:44]
+WARNING: [Synth 8-3917] design fourBitAdderTop has port segmentSelect[3] driven by constant 1
+WARNING: [Synth 8-3917] design fourBitAdderTop has port segmentSelect[2] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 413.031 ; gain = 151.246
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 413.031 ; gain = 151.246
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/constrs_1/new/basys3.xdc]
+Finished Parsing XDC File [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/constrs_1/new/basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fourBitAdderTop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fourBitAdderTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 738.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "segmentSelect" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "BCD" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---XORs : 
+	   3 Input      1 Bit         XORs := 4     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fullAdder 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module binToBCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 5     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+Module segmentMux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     20 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "segmentMux1/BCD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "segmentMux1/segmentSelect" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design fourBitAdderTop has port segmentSelect[3] driven by constant 1
+WARNING: [Synth 8-3917] design fourBitAdderTop has port segmentSelect[2] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 738.984 ; gain = 477.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     1|
+|4     |LUT2   |     3|
+|5     |LUT3   |     4|
+|6     |LUT4   |    16|
+|7     |LUT5   |     3|
+|8     |LUT6   |    29|
+|9     |MUXF7  |     1|
+|10    |FDRE   |    26|
+|11    |IBUF   |     9|
+|12    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+-----------+------+
+|      |Instance      |Module     |Cells |
++------+--------------+-----------+------+
+|1     |top           |           |   109|
+|2     |  bcdToSeg1   |bcdToSeg   |     1|
+|3     |  segmentMux1 |segmentMux |    87|
++------+--------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 756.328 ; gain = 168.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 756.328 ; gain = 494.543
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 758.445 ; gain = 508.887
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint 'F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/synth_1/fourBitAdderTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fourBitAdderTop_utilization_synth.rpt -pb fourBitAdderTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 758.445 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 18:19:06 2018...

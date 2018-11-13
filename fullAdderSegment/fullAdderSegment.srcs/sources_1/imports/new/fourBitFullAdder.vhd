@@ -57,7 +57,7 @@ begin
     adder0 : fullAdder Port map(
         A => A(0),
         B => B(0),
-        Cin => '0',
+        Cin => Cin,
         Z => Z(0),
         Cout =>  C0
     );

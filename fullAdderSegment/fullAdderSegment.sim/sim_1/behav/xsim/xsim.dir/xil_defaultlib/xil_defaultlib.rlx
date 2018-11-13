@@ -1,0 +1,14 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/bcdToSeg_Tb.vhd,1541946602,vhdl,,,,bcdtoseg_tb,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/binToBVD_Tb.vhd,1541851545,vhdl,,,,bintobvd_tb,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd,1541944777,vhdl,,,,fourbitaddertop_tb,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/segmentMux_Tb.vhd,1541946638,vhdl,,,,segmentmux_tb,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd,1541939334,vhdl,F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd,,,fourbitfulladder,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd,1541842853,vhdl,,,,fulladder,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd,1541943623,vhdl,F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd,,,bcdtoseg,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/binToBCD.vhd,1541870786,vhdl,F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd,,,bintobcd,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd,1542126848,vhdl,F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd,,,fourbitaddertop,,,,,,,,
+F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/segmentMux.vhd,1542126045,vhdl,F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd,,,segmentmux,,,,,,,,

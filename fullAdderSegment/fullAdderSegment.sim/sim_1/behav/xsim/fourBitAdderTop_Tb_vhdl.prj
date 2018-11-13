@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd" \
+"../../../../fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd" \
+"../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd" \
+"../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd" \
+"../../../../fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd" \
+"../../../../fullAdderSegment.srcs/sources_1/new/segmentMux.vhd" \
+"../../../../fullAdderSegment.srcs/sim_1/new/binToBVD_Tb.vhd" \
+"../../../../fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd" \
+"../../../../fullAdderSegment.srcs/sim_1/new/bcdToSeg_Tb.vhd" \
+"../../../../fullAdderSegment.srcs/sim_1/new/segmentMux_Tb.vhd" \
+
+# Do not sort compile order
+nosort
