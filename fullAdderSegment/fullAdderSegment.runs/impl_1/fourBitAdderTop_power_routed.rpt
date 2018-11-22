@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Nov 13 18:22:00 2018
+| Date             : Thu Nov 22 23:17:27 2018
 | Host             : DESKTOP-24KCCOQ running 64-bit major release  (build 9200)
 | Command          : report_power -file fourBitAdderTop_power_routed.rpt -pb fourBitAdderTop_power_summary_routed.pb -rpx fourBitAdderTop_power_routed.rpx
 | Design           : fourBitAdderTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.643        |
+| Total On-Chip Power (W)  | 0.588        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.570        |
-| Device Static (W)        | 0.073        |
+| Dynamic (W)              | 0.518        |
+| Device Static (W)        | 0.070        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 81.8         |
-| Junction Temperature (C) | 28.2         |
+| Max Ambient (C)          | 82.1         |
+| Junction Temperature (C) | 27.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.284 |       92 |       --- |             --- |
-|   LUT as Logic |     0.251 |       47 |     20800 |            0.23 |
-|   CARRY4       |     0.015 |        5 |      8150 |            0.06 |
-|   Register     |     0.012 |       26 |     41600 |            0.06 |
+| Slice Logic    |     0.242 |       99 |       --- |             --- |
+|   LUT as Logic |     0.202 |       30 |     20800 |            0.14 |
+|   Register     |     0.018 |       45 |     41600 |            0.11 |
+|   CARRY4       |     0.017 |        8 |      8150 |            0.10 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
-|   Others       |     0.000 |        3 |       --- |             --- |
-| Signals        |     0.249 |       72 |       --- |             --- |
+|   Others       |     0.000 |        5 |       --- |             --- |
+| Signals        |     0.240 |       88 |       --- |             --- |
 | I/O            |     0.036 |       20 |       106 |           18.87 |
-| Static Power   |     0.073 |          |           |                 |
-| Total          |     0.643 |          |           |                 |
+| Static Power   |     0.070 |          |           |                 |
+| Total          |     0.588 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.580 |       0.570 |      0.011 |
+| Vccint    |       1.000 |     0.529 |       0.518 |      0.011 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,12 +135,13 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------+-----------+
-| Name            | Power (W) |
-+-----------------+-----------+
-| fourBitAdderTop |     0.570 |
-|   bcdToSeg1     |    <0.001 |
-|   segmentMux1   |     0.457 |
-+-----------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| fourBitAdderTop  |     0.518 |
+|   bcdToSeg1      |     0.000 |
+|   clock_divider1 |     0.178 |
+|   segmentMux1    |     0.227 |
++------------------+-----------+
 
 

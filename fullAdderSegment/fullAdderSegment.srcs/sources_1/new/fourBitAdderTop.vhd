@@ -44,12 +44,21 @@ end fourBitAdderTop;
 architecture Behavioral of fourBitAdderTop is
 
 signal sum : std_logic_vector(4 downto 0);
-signal BCDBus : STD_LOGIC_VECTOR(7 downto 0);
-signal BCD : STD_LOGIC_VECTOR(3 downto 0);
+signal ones, tens, hundreds, BCD : std_logic_vector(3 downto 0);
+signal bin : std_logic_vector(7 downto 0);
+signal clk_divided : std_logic;
 
 begin
 
-   segmentSelect(3 downto 2) <= "11";
+   bin <= "000" & sum;
+   segmentSelect(3) <= '1';
+   
+   clock_divider1 : entity work.clock_divider(Behavioral)
+   port map(
+     clk => clk,
+     clk_divided => clk_divided
+   );
+
 
   adder : entity work.fourBitFullAdder(Behavioral) 
   port map(
@@ -62,23 +71,26 @@ begin
 
   binToBCDConverter : entity work.binToBCD(Behavioral)
   port map(
-    bin => sum,
-    BCD => BCDBus
+    bin => bin,
+    ones => ones,
+    tens => tens,
+    hundreds => hundreds
   );
   
-  segmentMux1 : entity work.segmentMux(Behavioral)
-  port map(
-    clk => clk,
-    BCDBus => BCDBus,
+ segmentMux1 : entity work.segmentMux(Behavioral)
+ port map(
+    clk => clk_divided,
+    ones => ones,
+    tens => tens,
+    hundreds => "0000",
     BCD => BCD,
-    segmentSelect => segmentSelect(1 downto 0)
-  );
+    segmentSelect => segmentSelect(2 downto 0)
+ );
   
   bcdToSeg1 : entity work.bcdToSeg(Behavioral)
   port map(
-    BCD => BCD,
-    segment => segment
+    segment => segment,
+    BCD => BCD
   );
-
-
+  
 end Behavioral;

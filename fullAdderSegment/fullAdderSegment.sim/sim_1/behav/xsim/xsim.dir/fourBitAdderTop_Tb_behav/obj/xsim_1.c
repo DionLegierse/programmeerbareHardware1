@@ -44,21 +44,24 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-extern void execute_14(char*, char *);
-extern void execute_15(char*, char *);
-extern void execute_38(char*, char *);
+extern void execute_45(char*, char *);
+extern void execute_46(char*, char *);
+extern void execute_13(char*, char *);
+extern void execute_16(char*, char *);
+extern void execute_17(char*, char *);
 extern void execute_40(char*, char *);
 extern void execute_42(char*, char *);
+extern void execute_44(char*, char *);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 extern void transaction_4(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[7] = {(funcp)execute_14, (funcp)execute_15, (funcp)execute_38, (funcp)execute_40, (funcp)execute_42, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_4};
-const int NumRelocateId= 7;
+funcp funcTab[10] = {(funcp)execute_45, (funcp)execute_46, (funcp)execute_13, (funcp)execute_16, (funcp)execute_17, (funcp)execute_40, (funcp)execute_42, (funcp)execute_44, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_4};
+const int NumRelocateId= 10;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/fourBitAdderTop_Tb_behav/xsim.reloc",  (void **)funcTab, 7);
-	iki_vhdl_file_variable_register(dp + 4160);
-	iki_vhdl_file_variable_register(dp + 4216);
+	iki_relocate(dp, "xsim.dir/fourBitAdderTop_Tb_behav/xsim.reloc",  (void **)funcTab, 10);
+	iki_vhdl_file_variable_register(dp + 5360);
+	iki_vhdl_file_variable_register(dp + 5416);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

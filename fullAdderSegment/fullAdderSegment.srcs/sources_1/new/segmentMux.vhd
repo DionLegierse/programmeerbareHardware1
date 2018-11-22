@@ -33,34 +33,39 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity segmentMux is
     Port ( clk : in STD_LOGIC;
-           BCDBus : in STD_LOGIC_VECTOR (7 downto 0);
+           ones : in std_logic_vector(3 downto 0);
+           tens : in std_logic_vector(3 downto 0);
+           hundreds : in std_logic_vector(3 downto 0);
            BCD : out STD_LOGIC_VECTOR (3 downto 0);
-           segmentSelect : out STD_LOGIC_VECTOR (1 downto 0));
+           segmentSelect : out STD_LOGIC_VECTOR (2 downto 0));
 end segmentMux;
 
 architecture Behavioral of segmentMux is
 
 begin
     process(clk)
-        variable counter : integer range 0 to 1000000;
+        variable counter : integer range 0 to 30 := 0;
     begin
         if rising_edge(clk) then
 
             case( counter ) is
                 when 1 =>
-                    segmentSelect <= "10";
-                when 450000 =>
-                    BCD <= BCDBus(7 downto 4);
-                    segmentSelect <= "11";
-                when 500000 =>
-                    segmentSelect <= "01";
-                when 950000 =>
-                    BCD <= BCDBus(3 downto 0);
-                    segmentSelect <= "11";
-                when 1000000 =>
-                    counter := 0;    
-                when others =>
-                    NULL;
+                    segmentSelect <= "110";                
+                when 10 =>
+                    BCD <= tens;
+                    segmentSelect <= (others => '1'); 
+                when 11 =>
+                    segmentSelect <= "101";                
+                when 20 =>
+                    BCD <= hundreds;
+                    segmentSelect <= (others => '1'); 
+                when 21 =>
+                    segmentSelect <= "011";  
+                when 30 =>
+                    BCD <= ones;
+                    segmentSelect <= (others => '1'); 
+                    counter := 0;
+                when others => NULL;
             end case ;
 
             counter := counter + 1;

@@ -38,23 +38,27 @@ end binToBVD_Tb;
 
 architecture Bench of binToBVD_Tb is
 
-    signal bin : STD_LOGIC_VECTOR(4 downto 0);
-    signal BCD : STD_LOGIC_VECTOR(7 downto 0);
+    signal bin : STD_LOGIC_VECTOR(7 downto 0);
+    signal ones, tens, hundreds : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
     dut : entity work.binToBCD(Behavioral)
     port map(
         bin => bin,
-        BCD => BCD
+        ones => ones,
+        tens => tens,
+        hundreds => hundreds
     );
     
     process
     variable i : integer := 0;
     begin
-        for i in 0 to 32 loop
+        for i in 0 to 255 loop
             bin <= conv_std_logic_vector(i, bin'length);
             wait for 10 ns;
         end loop;
+        
+    wait;
     end process;
 
 end Bench;

@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -68,15 +67,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param general.maxThreads 6
+  set_param simulator.modelsimInstallPath F:/Modeltech_pe_edu_10.4a/win32pe_edu
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache {C:/Users/Dion Legierse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-18392-DESKTOP-24KCCOQ/incrSyn}
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/impl_1/fourBitAdderTop.dcp
+  set_param synth.incrementalSynthesisCache {C:/Users/Dion Legierse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12148-DESKTOP-24KCCOQ/incrSyn}
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.cache/wt [current_project]
   set_property parent.project_path F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.xpr [current_project]
   set_property ip_output_repo F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.runs/synth_1/fourBitAdderTop.dcp
+  read_xdc F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/constrs_1/new/basys3.xdc
+  link_design -top fourBitAdderTop -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

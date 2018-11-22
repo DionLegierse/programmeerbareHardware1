@@ -33,36 +33,45 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity binToBCD is
-    Port ( bin : in STD_LOGIC_VECTOR (4 downto 0);
-           BCD : out STD_LOGIC_VECTOR(7 downto 0)
-           );
+    Port ( 
+        bin : in STD_LOGIC_VECTOR (7 downto 0);
+        ones : out STD_LOGIC_VECTOR(3 downto 0);
+        tens : out STD_LOGIC_VECTOR(3 downto 0);
+        hundreds : out STD_LOGIC_VECTOR(3 downto 0)
+    );
 end binToBCD;
 
 architecture Behavioral of binToBCD is
 begin
     process( bin )
         variable i : integer;
-        variable binary_shift : STD_LOGIC_VECTOR(12 downto 0);
+        variable binary_shift : STD_LOGIC_VECTOR(19 downto 0);
     begin
         --initialization
-        binary_shift := (4 => bin(4), 3 => bin(3), 2 => bin(2), 1 => bin(1), 0 => bin(0), others=> '0');
+        binary_shift(19 downto 8) := (others => '0');
+        binary_shift(7 downto 0) := bin;
 
-        for i in 0 to 4 loop
+        for i in 0 to 7 loop
             --addition if over column over or equal to 5
-            if(binary_shift(8 downto 5) >= "0101") then
-                binary_shift(8 downto 5) := binary_shift(8 downto 5) + "0011";
+            if(binary_shift(11 downto 8) >= "0101") then
+                binary_shift(11 downto 8) := binary_shift(11 downto 8) + "0011";
             end if;
 
-            if(binary_shift(12 downto 9) >= "0101") then
-                binary_shift(12 downto 9) := binary_shift(12 downto 9) + "0011";
+            if(binary_shift(15 downto 12) >= "0101") then
+                binary_shift(15 downto 12) := binary_shift(15 downto 12) + "0011";
+            end if;
+            
+            if(binary_shift(19 downto 16) >= "0101") then
+                binary_shift(19 downto 16) := binary_shift(19 downto 16) + "0011";
             end if;
 
             --shifting everyting
-
-            binary_shift := binary_shift(11 downto 0) & '0';
+            binary_shift := binary_shift(18 downto 0) & '0';
         end loop;
         
-        BCD <= binary_shift(12 downto 5);
+        ones <= binary_shift(11 downto 8);
+        tens <= binary_shift(15 downto 12);
+        hundreds <= binary_shift(19 downto 16);
     end process ;
 
 end architecture;

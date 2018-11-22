@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Nov 13 18:22:00 2018
+| Date         : Thu Nov 22 23:17:27 2018
 | Host         : DESKTOP-24KCCOQ running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file fourBitAdderTop_timing_summary_routed.rpt -rpx fourBitAdderTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : fourBitAdderTop
@@ -52,7 +52,9 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 26 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 33 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: clock_divider1/clk_var_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +69,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 32 pins that are not constrained for maximum delay. (HIGH)
+ There are 83 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -81,7 +83,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 9 ports with no output delay specified. (HIGH)
+ There are 10 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

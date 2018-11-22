@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1542129657">
-  <File Type="OPT-HWDEF" Name="fourBitAdderTop.hwdef"/>
-  <File Type="PA-DCP" Name="fourBitAdderTop.dcp"/>
-  <File Type="OPT-DCP" Name="fourBitAdderTop_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1542924942">
+  <File Type="PWROPT-DCP" Name="fourBitAdderTop_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="fourBitAdderTop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="fourBitAdderTop.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="fourBitAdderTop_power_summary_routed.pb"/>
@@ -10,9 +8,10 @@
   <File Type="BG-DRC" Name="fourBitAdderTop.drc"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="fourBitAdderTop_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="fourBitAdderTop_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="fourBitAdderTop.hwdef"/>
+  <File Type="OPT-DCP" Name="fourBitAdderTop_opt.dcp"/>
   <File Type="OPT-DRC" Name="fourBitAdderTop_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="fourBitAdderTop_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="fourBitAdderTop_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="fourBitAdderTop_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="fourBitAdderTop_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="fourBitAdderTop_placed.dcp"/>
@@ -101,6 +100,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/segmentMux.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

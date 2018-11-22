@@ -38,8 +38,10 @@ end fourBitAdderTop_Tb;
 architecture Bench of fourBitAdderTop_Tb is
     signal A,B : STD_LOGIC_VECTOR(3 downto 0);
     signal segment : STD_LOGIC_VECTOR(6 downto 0);
-    signal segmentSelect : STD_LOGIC_VECTOR(1 downto 0);
-    signal clk : STD_LOGIC;
+    signal segmentSelect : STD_LOGIC_VECTOR(2 downto 0);
+    signal clk : STD_LOGIC := '0';
+    
+    signal is_clk_on : BOOLEAN := TRUE;
 begin
     dut : entity work.fourBitAdderTop(Behavioral) port map(
         A => A,
@@ -48,5 +50,26 @@ begin
         segment => segment,
         segmentSelect => segmentSelect
     );
+    
+    
+    process
+    begin
+        while is_clk_on loop
+            clk <= not clk;
+            wait for 10 ns;
+         end loop;
+         
+         wait;
+    end process;
+    
+    process
+    begin
+        A <= "1011";
+        B <= "0001";
+        
+        wait for 1000 ns;
+        is_clk_on <= FALSE;
+        wait;
+    end process;
 
 end Bench;

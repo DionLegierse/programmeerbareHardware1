@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: F:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 5495bf6f1ce24995a1746cdf164e9a1c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot fourBitAdderTop_Tb_behav xil_defaultlib.fourBitAdderTop_Tb -log elaborate.log 
+Running: F:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 5495bf6f1ce24995a1746cdf164e9a1c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clock_divider_behav xil_defaultlib.clock_divider -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,14 +10,5 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.fullAdder [fulladder_default]
-Compiling architecture behavioral of entity xil_defaultlib.fourBitFullAdder [fourbitfulladder_default]
-Compiling architecture behavioral of entity xil_defaultlib.binToBCD [bintobcd_default]
-Compiling architecture behavioral of entity xil_defaultlib.segmentMux [segmentmux_default]
-Compiling architecture behavioral of entity xil_defaultlib.bcdToSeg [bcdtoseg_default]
-Compiling architecture behavioral of entity xil_defaultlib.fourBitAdderTop [fourbitaddertop_default]
-Compiling architecture bench of entity xil_defaultlib.fourbitaddertop_tb
-Built simulation snapshot fourBitAdderTop_Tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider
+Built simulation snapshot clock_divider_behav

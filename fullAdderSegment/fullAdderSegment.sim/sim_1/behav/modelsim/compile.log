@@ -1,0 +1,96 @@
+# do {binToBCD_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# 
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 20:47:57 on Nov 22,2018
+# vcom -64 -93 -work xil_defaultlib ../../../../fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd ../../../../fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd ../../../../fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd ../../../../fullAdderSegment.srcs/sources_1/new/segmentMux.vhd ../../../../fullAdderSegment.srcs/sim_1/new/binToBVD_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/bcdToSeg_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/segmentMux_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fullAdder
+# -- Compiling architecture Behavioral of fullAdder
+# -- Compiling entity fourBitFullAdder
+# -- Compiling architecture Behavioral of fourBitFullAdder
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity binToBCD
+# -- Compiling architecture Behavioral of binToBCD
+# ** Warning: ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd(56): (vcom-1246) Range 1 downto 8 is null.
+# 
+# ** Warning: ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd(56): (vcom-1272) Length of expected is 4; length of actual is 0.
+# 
+# -- Compiling entity fourBitAdderTop
+# -- Compiling architecture Behavioral of fourBitAdderTop
+# -- Loading entity fourBitFullAdder
+# ** Error: (vcom-11) Could not find work.segmentmux.
+# 
+# ** Error (suppressible): ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(69): (vcom-1195) Cannot find expanded name "work.segmentMux".
+# 
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(69): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.bcdtoseg.
+# 
+# ** Error (suppressible): ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(77): (vcom-1195) Cannot find expanded name "work.bcdToSeg".
+# 
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(77): Unknown expanded name.
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(84): VHDL Compiler exiting
+# End time: 20:47:57 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 3
+# child process exited abnormally
+# Error in macro ./binToBCD_compile.do line 27
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 20:47:57 on Nov 22,2018
+# vcom -64 -93 -work xil_defaultlib ../../../../fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd ../../../../fullAdderSegment.srcs/sources_1/imports/new/fourBitFullAdder.vhd ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd ../../../../fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd ../../../../fullAdderSegment.srcs/sources_1/new/segmentMux.vhd ../../../../fullAdderSegment.srcs/sim_1/new/binToBVD_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/bcdToSeg_Tb.vhd ../../../../fullAdderSegment.srcs/sim_1/new/segmentMux_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fullAdder
+# -- Compiling architecture Behavioral of fullAdder
+# -- Compiling entity fourBitFullAdder
+# -- Compiling architecture Behavioral of fourBitFullAdder
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity binToBCD
+# -- Compiling architecture Behavioral of binToBCD
+# ** Warning: ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd(56): (vcom-1246) Range 1 downto 8 is null.
+# 
+# ** Warning: ../../../../fullAdderSegment.srcs/sources_1/new/binToBCD.vhd(56): (vcom-1272) Length of expected is 4; length of actual is 0.
+# 
+# -- Compiling entity fourBitAdderTop
+# -- Compiling architecture Behavioral of fourBitAdderTop
+# -- Loading entity fourBitFullAdder
+# ** Error: (vcom-11) Could not find work.segmentmux.
+# 
+# ** Error (suppressible): ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(69): (vcom-1195) Cannot find expanded name "work.segmentMux".
+# 
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(69): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.bcdtoseg.
+# 
+# ** Error (suppressible): ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(77): (vcom-1195) Cannot find expanded name "work.bcdToSeg".
+# 
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(77): Unknown expanded name.
+# ** Error: ../../../../fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd(84): VHDL Compiler exiting
+# End time: 20:47:57 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 3
+# child process exited abnormally
+#     while executing
+# "exec <nul: {F:\Modeltech_pe_edu_10.4a\win32pe_edu\vcom.EXE} -64 -93 -work xil_defaultlib ../../../../fullAdderSegment.srcs/sources_1/imports/new/fullA..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "F:\\Modeltech_pe_edu_10.4a\\win32pe_edu\\vcom -64 -93 -work xil_defaultlib  \
+# "../../../../fullAdderSegment.srcs/sources_1/imports/new/fullAdder.vhd" ..."

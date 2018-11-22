@@ -1,4 +1,6 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity fourBitAdderTop
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/clock_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
 INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sim_1/new/fourBitAdderTop_Tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity fourBitAdderTop_Tb

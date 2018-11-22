@@ -16,10 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param general.maxThreads 6
+set_param simulator.modelsimInstallPath F:/Modeltech_pe_edu_10.4a/win32pe_edu
 set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache {C:/Users/Dion Legierse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-18392-DESKTOP-24KCCOQ/incrSyn}
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache {C:/Users/Dion Legierse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12148-DESKTOP-24KCCOQ/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -41,6 +40,7 @@ read_vhdl -library xil_defaultlib {
   F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/fourBitAdderTop.vhd
   F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/bcdToSeg.vhd
   F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/segmentMux.vhd
+  F:/programmeerbareHardware1/fullAdderSegment/fullAdderSegment.srcs/sources_1/new/clock_divider.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
