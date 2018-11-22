@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov 23 00:30:16 2018
+# Process ID: 18668
+# Current directory: F:/programmeerbareHardware1/fullAdder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7476 F:\programmeerbareHardware1\fullAdder\fullAdder.xpr
+# Log file: F:/programmeerbareHardware1/fullAdder/vivado.log
+# Journal file: F:/programmeerbareHardware1/fullAdder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/programmeerbareHardware1/fullAdder/fullAdder.xpr
+update_compile_order -fileset sources_1
