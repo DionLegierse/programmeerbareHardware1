@@ -204,9 +204,9 @@ begin
     Exp <= "---------0"; wait for OP_DELAY;
     Exp <= "0000000000"; wait for OP_DELAY;
     Exp <= "1111111110"; wait for OP_DELAY;
-    Exp <= "1000000000"; wait for OP_DELAY;
-    Exp <= "1000000000"; wait for OP_DELAY;
     Exp <= "1000000010"; wait for OP_DELAY;
+    Exp <= "1000000010"; wait for OP_DELAY;
+    Exp <= "1000000000"; wait for OP_DELAY;
     Exp <= "---------0"; wait for OP_DELAY;
     Exp <= "1000000010"; wait for OP_DELAY;
     Exp <= "0000000000"; wait for OP_DELAY;
@@ -220,9 +220,9 @@ begin
     Exp <= "---------0"; wait for OP_DELAY;
     Exp <= "0000000000"; wait for OP_DELAY;
     Exp <= "1111111110"; wait for OP_DELAY;
-    Exp <= "1111100000"; wait for OP_DELAY;
-    Exp <= "1111100000"; wait for OP_DELAY;
-    Exp <= "0000100010"; wait for OP_DELAY;
+    Exp <= "1111100010"; wait for OP_DELAY;
+    Exp <= "1111100010"; wait for OP_DELAY;
+    Exp <= "0000100000"; wait for OP_DELAY;
     Exp <= "---------0"; wait for OP_DELAY;
     Exp <= "1111100010"; wait for OP_DELAY;
     Exp <= "0000000000"; wait for OP_DELAY;

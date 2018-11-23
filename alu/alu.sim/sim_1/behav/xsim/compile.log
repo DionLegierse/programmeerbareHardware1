@@ -1,2 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/alu/alu.srcs/sim_1/imports/programmeerbareHardware1/alu_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity alu
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sim_1/imports/programmeerbareHardware1/alu_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity ALU_TB
