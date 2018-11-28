@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon Nov 19 22:54:34 2018
-# Process ID: 15968
+# Start of session at: Wed Nov 28 20:20:59 2018
+# Process ID: 15320
 # Current directory: F:/programmeerbareHardware1/alu/alu.runs/synth_1
-# Command line: vivado.exe -log alu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu.tcl
-# Log file: F:/programmeerbareHardware1/alu/alu.runs/synth_1/alu.vds
+# Command line: vivado.exe -log aluBoardTest.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aluBoardTest.tcl
+# Log file: F:/programmeerbareHardware1/alu/alu.runs/synth_1/aluBoardTest.vds
 # Journal file: F:/programmeerbareHardware1/alu/alu.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source alu.tcl -notrace
+source aluBoardTest.tcl -notrace

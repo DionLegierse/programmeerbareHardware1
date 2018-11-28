@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 11/07/2018 05:29:09 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: blinky - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -38,13 +38,15 @@ entity blinky is
 end blinky;
 
 architecture Behavioral of blinky is
-    signal count: STD_LOGIC_VECTOR(24 downto 0);
+    signal count : STD_LOGIC_VECTOR(24 downto 0);
+
 begin
     process(clk)
     begin
     if rising_edge(clk) then
         count <= (count + '1');
     end if;
-     end process;
+ end process;
+
  led <= count(24);
 end Behavioral;

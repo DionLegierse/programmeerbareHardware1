@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 11/07/2018 11:42:00 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: fourBitFullAdder - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 library IEEE;
@@ -51,9 +51,8 @@ architecture Behavioral of fourBitFullAdder is
     end component;
 
     signal C0, C1, C2 : std_logic;
-
+    
 begin
-
     adder0 : fullAdder Port map(
         A => A(0),
         B => B(0),

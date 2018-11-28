@@ -2,16 +2,32 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Nov  8 23:46:07 2018
-# Process ID: 4892
-# Current directory: C:/Users/djleg/Documents/programmeerbareHardware1/blinky
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13744 C:\Users\djleg\Documents\programmeerbareHardware1\blinky\blinky.xpr
-# Log file: C:/Users/djleg/Documents/programmeerbareHardware1/blinky/vivado.log
-# Journal file: C:/Users/djleg/Documents/programmeerbareHardware1/blinky\vivado.jou
+# Start of session at: Wed Nov 28 20:29:48 2018
+# Process ID: 7452
+# Current directory: F:/programmeerbareHardware1/blinky
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14688 F:\programmeerbareHardware1\blinky\blinky.xpr
+# Log file: F:/programmeerbareHardware1/blinky/vivado.log
+# Journal file: F:/programmeerbareHardware1/blinky\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/djleg/Documents/programmeerbareHardware1/blinky/blinky.xpr
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-open_run impl_1
+open_project F:/programmeerbareHardware1/blinky/blinky.xpr
+create_bd_design "design_1"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:c_addsub:12.0 c_addsub_0
+endgroup
+set_property location {0.5 -65 -249} [get_bd_cells c_addsub_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "design_1" 
+endgroup
+delete_bd_objs [get_bd_nets sys_clock_1] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_ports sys_clock]
+set_property source_mgmt_mode All [current_project]
+create_bd_cell -type module -reference blinky blinky_0
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_cells blinky_0]
+delete_bd_objs [get_bd_cells c_addsub_0]
+open_bd_design {F:/programmeerbareHardware1/blinky/blinky.srcs/sources_1/bd/design_1/design_1.bd}
+export_ip_user_files -of_objects  [get_files F:/programmeerbareHardware1/blinky/blinky.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  F:/programmeerbareHardware1/blinky/blinky.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force F:/programmeerbareHardware1/blinky/blinky.srcs/sources_1/bd/design_1

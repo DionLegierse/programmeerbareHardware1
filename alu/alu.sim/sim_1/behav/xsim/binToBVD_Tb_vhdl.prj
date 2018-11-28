@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../alu.srcs/sources_1/new/alu.vhd" \
+"../../../../alu.srcs/sources_1/new/oneShot.vhd" \
+"../../../../alu.srcs/sources_1/new/upDownCounter.vhd" \
+"../../../../alu.srcs/sources_1/imports/new/binToBCD.vhd" \
+"../../../../alu.srcs/sources_1/imports/new/segmentMux.vhd" \
+"../../../../alu.srcs/sources_1/imports/new/bcdToSeg.vhd" \
+"../../../../alu.srcs/sources_1/imports/new/clock_divider.vhd" \
+"../../../../alu.srcs/sources_1/new/aluBoardTest.vhd" \
+"../../../../alu.srcs/sim_1/new/oneShot_Tb.vhd" \
+"../../../../alu.srcs/sim_1/imports/programmeerbareHardware1/alu_tb.vhd" \
+"../../../../alu.srcs/sim_1/new/binToBVD_Tb.vhd" \
+
+# Do not sort compile order
+nosort

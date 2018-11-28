@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1541752533">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543159329">
   <File Type="PA-TCL" Name="blinky.tcl"/>
   <File Type="REPORTS-TCL" Name="blinky_reports.tcl"/>
   <File Type="RDS-RDS" Name="blinky.vds"/>

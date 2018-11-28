@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log alu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu.tcl
+    with args -log aluBoardTest.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aluBoardTest.tcl
 
 
 ****** Vivado v2017.4 (64-bit)
@@ -8,35 +8,91 @@
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source alu.tcl -notrace
-Command: synth_design -top alu -part xc7a35tcpg236-1
+source aluBoardTest.tcl -notrace
+Command: synth_design -top aluBoardTest -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2900 
+INFO: Helper process launched with PID 6748 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 360.574 ; gain = 98.332
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 361.449 ; gain = 99.605
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'aluBoardTest' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/aluBoardTest.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'alu' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'alu' (1#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'oneShot' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/oneShot.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'oneShot' (2#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/oneShot.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'upDownCounter' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:41]
+INFO: [Synth 8-4471] merging register 'countOut_reg[3:0]' into 'counter_reg[3:0]' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element countOut_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'upDownCounter' (3#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'binToBCD' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/binToBCD.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'binToBCD' (4#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/binToBCD.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'segmentMux' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'segmentMux' (5#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'bcdToSeg' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/bcdToSeg.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'bcdToSeg' (6#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/bcdToSeg.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd:39]
+INFO: [Synth 8-4471] merging register 'clk_divided_reg' into 'clk_var_reg' [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element clk_divided_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (7#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'aluBoardTest' (8#1) [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/aluBoardTest.vhd:45]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 412.742 ; gain = 150.500
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 413.332 ; gain = 151.488
 ---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 412.742 ; gain = 150.500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 413.332 ; gain = 151.488
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc]
+Finished Parsing XDC File [F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aluBoardTest_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aluBoardTest_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 742.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 742.035 ; gain = 480.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 412.742 ; gain = 150.500
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 742.035 ; gain = 480.191
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd:51]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 412.742 ; gain = 150.500
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 742.035 ; gain = 480.191
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <unary minus> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:49]
+INFO: [Synth 8-5546] ROM "segmentSelect" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "BCD" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd:51]
+INFO: [Synth 8-5545] ROM "clk_var" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 742.035 ; gain = 480.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -44,16 +100,35 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 22    
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	  14 Input      9 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 16    
+	  14 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 23    
+	   9 Input      4 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -65,9 +140,55 @@ Module alu
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input      9 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 2     
 +---Muxes : 
-	  14 Input      9 Bit        Muxes := 2     
+	  14 Input      9 Bit        Muxes := 3     
+Module oneShot 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module upDownCounter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module binToBCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 21    
+	   2 Input      3 Bit       Adders := 3     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 16    
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 23    
+Module segmentMux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   9 Input      4 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 2     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -80,12 +201,15 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clock_divider1/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock_divider1/clk_var" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element opCodeCounter1/counter_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element multiplexer1/counter_reg was removed.  [F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd:51]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 742.035 ; gain = 480.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -93,12 +217,17 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 743.000 ; gain = 481.156
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 743.223 ; gain = 481.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -110,7 +239,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -134,7 +263,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -147,7 +276,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -159,25 +288,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -193,30 +322,40 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |     3|
-|2     |LUT2   |     8|
-|3     |LUT3   |     6|
-|4     |LUT4   |    19|
-|5     |LUT5   |    10|
-|6     |LUT6   |    23|
-|7     |IBUF   |    20|
-|8     |OBUF   |    10|
+|1     |BUFG   |     1|
+|2     |CARRY4 |    11|
+|3     |LUT1   |     2|
+|4     |LUT2   |     8|
+|5     |LUT3   |    22|
+|6     |LUT4   |    31|
+|7     |LUT5   |    21|
+|8     |LUT6   |    43|
+|9     |FDRE   |    55|
+|10    |IBUF   |    19|
+|11    |OBUF   |    16|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    99|
-+------+---------+-------+------+
++------+-----------------+--------------+------+
+|      |Instance         |Module        |Cells |
++------+-----------------+--------------+------+
+|1     |top              |              |   229|
+|2     |  alu1           |alu           |     9|
+|3     |  clock_divider1 |clock_divider |    52|
+|4     |  downOneShot1   |oneShot       |     5|
+|5     |  multiplexer1   |segmentMux    |    27|
+|6     |  opCodeCounter1 |upDownCounter |    85|
+|7     |  toseg1         |bcdToSeg      |     7|
+|8     |  upOneShot1     |oneShot_0     |     5|
++------+-----------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 550.992 ; gain = 288.750
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 767.676 ; gain = 177.129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 767.676 ; gain = 505.832
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -224,10 +363,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+39 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 652.383 ; gain = 402.637
-INFO: [Common 17-1381] The checkpoint 'F:/programmeerbareHardware1/alu/alu.runs/synth_1/alu.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file alu_utilization_synth.rpt -pb alu_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 652.383 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 19 22:54:56 2018...
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 767.676 ; gain = 517.305
+INFO: [Common 17-1381] The checkpoint 'F:/programmeerbareHardware1/alu/alu.runs/synth_1/aluBoardTest.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file aluBoardTest_utilization_synth.rpt -pb aluBoardTest_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 767.676 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 28 20:21:41 2018...

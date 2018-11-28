@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 11/19/2018 08:12:25 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: alu - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -32,7 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity alu is
- Port ( 
+ Port (
      A,B : in STD_LOGIC_VECTOR(7 downto 0);
      Op : in STD_LOGIC_VECTOR(3 downto 0);
      Res : out STD_LOGIC_VECTOR(7 downto 0);
@@ -46,42 +46,45 @@ architecture Behavioral of alu is
 begin
 
     aluProcess : process(A,B,Op)
-        variable result : SIGNED(8 downto 0);
+        variable result,At,Bt : SIGNED(8 downto 0);
     begin
+        At := resize(SIGNED(A), 9);
+        Bt := resize(SIGNED(B), 9);
+        
         case Op is
             --addition
             when "0000" =>
-                result := ('0' & SIGNED(A)) + ('0' & SIGNED(B));
+                result := At + Bt;
             --ABsubtraction
             when "0001" =>
-                result := ('0' & SIGNED(A)) - ('0' & SIGNED(B));
+                result := At - Bt;
             --BAsubtraction
             when "0010" =>
-                result := ('0' & SIGNED(B)) - ('0' & SIGNED(A));
+                result := Bt - At;
             --onlyA
             when "0100" =>
-                result := SIGNED(A(7) & A);
+                result := At;
             --onlyB
             when "0101" =>
-                result := SIGNED(B(7) & B);
+                result := Bt;
             --minA
             when "0110" =>
-                result := (not (A(7) & SIGNED(A))) + 1;
+                result := 0 - At;
             --minB
             when "0111" =>
-                result := (not (B(7) & SIGNED(B))) + 1;
+                result := 0 - Bt;
             --shiftLeftA
             when "1000" =>
-                result := SIGNED(A & '0');
+                result := At(7 downto 0) & '0';
             --shiftRightA
             when "1001" =>
-                result := SIGNED("00" & A(7 downto 1));
+                result := "00" & At(7 downto 1);
             --RotateLeftA
             when "1010" =>
-                result := SIGNED(A & A(7));
+                result := At(7) & At(6 downto 0) & A(7);
             --RotateRightA
             when "1011" =>
-                result := SIGNED('0' & A(0) & A(7 downto 1));
+                result := '0' & At(0) & At(7 downto 1);
             --all 0
             when "1110" =>
                 result := (others => '0');
@@ -96,14 +99,14 @@ begin
             Res <= STD_LOGIC_VECTOR(result(7 downto 0));
             Cout <= STD_LOGIC(result(8));
     end process;
-    
+
     equalProcess : process(A,B)
-    
+
     begin
         if (A = B) then
             Equal <= '1';
         else
-            Equal <= '0'; 
+            Equal <= '0';
         end if;
     end process;
 
