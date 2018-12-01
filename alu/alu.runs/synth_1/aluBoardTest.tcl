@@ -16,31 +16,27 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param simulator.modelsimInstallPath F:/Modeltech_pe_edu_10.4a/win32pe_edu
-set_param synth.incrementalSynthesisCache {C:/Users/Dion Legierse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16452-DESKTOP-24KCCOQ/incrSyn}
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir F:/programmeerbareHardware1/alu/alu.cache/wt [current_project]
-set_property parent.project_path F:/programmeerbareHardware1/alu/alu.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.cache/wt [current_project]
+set_property parent.project_path C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo f:/programmeerbareHardware1/alu/alu.cache/ip [current_project]
+set_property ip_output_repo c:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/oneShot.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/binToBCD.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/bcdToSeg.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd
-  F:/programmeerbareHardware1/alu/alu.srcs/sources_1/new/aluBoardTest.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/new/alu.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/new/oneShot.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/new/upDownCounter.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/binToBCD.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/segmentMux.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/bcdToSeg.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/clock_divider.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sources_1/new/aluBoardTest.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,8 +46,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc
-set_property used_in_implementation false [get_files F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc]
+read_xdc C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc
+set_property used_in_implementation false [get_files C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc]
 
 
 synth_design -top aluBoardTest -part xc7a35tcpg236-1

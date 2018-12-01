@@ -1,65 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543432857">
-  <File Type="PWROPT-DCP" Name="aluBoardTest_pwropt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543493680">
   <File Type="ROUTE-PWR" Name="aluBoardTest_power_routed.rpt"/>
   <File Type="PA-TCL" Name="aluBoardTest.tcl"/>
+  <File Type="PWROPT-DCP" Name="aluBoardTest_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="aluBoardTest_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="aluBoardTest_reports.tcl"/>
   <File Type="BG-DRC" Name="aluBoardTest.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="aluBoardTest_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="aluBoardTest_timing_summary_init.rpt"/>
   <File Type="OPT-HWDEF" Name="aluBoardTest.hwdef"/>
   <File Type="OPT-DCP" Name="aluBoardTest_opt.dcp"/>
   <File Type="OPT-DRC" Name="aluBoardTest_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="aluBoardTest_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="aluBoardTest_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="aluBoardTest_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="aluBoardTest_placed.dcp"/>
   <File Type="PLACE-IO" Name="aluBoardTest_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="aluBoardTest_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="aluBoardTest_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="aluBoardTest_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="aluBoardTest_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="aluBoardTest_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="aluBoardTest_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="aluBoardTest_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="aluBoardTest_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="aluBoardTest_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="aluBoardTest_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="aluBoardTest_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="aluBoardTest.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="aluBoardTest_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="aluBoardTest_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="aluBoardTest_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="aluBoardTest_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="aluBoardTest_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="aluBoardTest_drc_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="aluBoardTest.msk"/>
   <File Type="ROUTE-DRC-RPX" Name="aluBoardTest_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="aluBoardTest.bgn"/>
+  <File Type="BITSTR-MSK" Name="aluBoardTest.msk"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="aluBoardTest_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="aluBoardTest.rbt"/>
+  <File Type="BG-BGN" Name="aluBoardTest.bgn"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="aluBoardTest_methodology_drc_routed.rpx"/>
-  <File Type="BG-BIN" Name="aluBoardTest.bin"/>
+  <File Type="BITSTR-RBT" Name="aluBoardTest.rbt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="aluBoardTest_methodology_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="aluBoardTest.bin"/>
   <File Type="ROUTE-PWR-RPX" Name="aluBoardTest_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="aluBoardTest_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="aluBoardTest_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="aluBoardTest_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="aluBoardTest_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="aluBoardTest_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="aluBoardTest_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="aluBoardTest.vdi"/>
   <File Type="ROUTE-CLK" Name="aluBoardTest_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="aluBoardTest.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="aluBoardTest_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="aluBoardTest_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="aluBoardTest_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="aluBoardTest_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="aluBoardTest_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="aluBoardTest.nky"/>
   <File Type="BITSTR-BMM" Name="aluBoardTest_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="aluBoardTest.mmi"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="aluBoardTest.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="aluBoardTest.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
