@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/alu/alu.srcs/sources_1/imports/new/binToBCD.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity binToBCD
-INFO: [VRFC 10-163] Analyzing VHDL file "F:/programmeerbareHardware1/alu/alu.srcs/sim_1/new/binToBVD_Tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity binToBVD_Tb

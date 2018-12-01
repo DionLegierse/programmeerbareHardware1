@@ -1,2 +1,4 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
+Note: ALU Finished OK
+Time: 10249 ns  Iteration: 0  Process: /ALU_TB/Check  File: C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/sim_1/imports/programmeerbareHardware1/alu_tb.vhd

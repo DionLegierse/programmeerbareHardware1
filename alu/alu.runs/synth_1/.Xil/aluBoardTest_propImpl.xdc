@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc rfile:../../../alu.srcs/constrs_1/new/basys3.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/djleg/Documents/programmeerbareHardware1/alu/alu.srcs/constrs_1/new/basys3.xdc rfile:../../../alu.srcs/constrs_1/new/basys3.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V17 [get_ports {A[0]}]
 set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]
