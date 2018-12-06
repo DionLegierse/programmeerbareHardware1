@@ -1,0 +1,12 @@
+
+{ 
+    crc :  793126273380818156  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 8d04ae35f7c747f38a046a3f2ed6e1de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot binToTimeBcd_behav xil_defaultlib.binToTimeBcd" , 
+    buildDate : "Dec 15 2017" , 
+    buildTime : "21:07:18" , 
+    linkCmd : "F:\\Xilinx\\Vivado\\2017.4\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/binToTimeBcd_behav/xsimk.exe\"   \"xsim.dir/binToTimeBcd_behav/obj/xsim_0.win64.obj\" \"xsim.dir/binToTimeBcd_behav/obj/xsim_1.win64.obj\" \"F:\\Xilinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simulator_kernel.dll\" \"F:\\Xilinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

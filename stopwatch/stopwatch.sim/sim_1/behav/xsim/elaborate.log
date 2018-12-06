@@ -1,0 +1,15 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 8d04ae35f7c747f38a046a3f2ed6e1de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot binToTimeBcd_behav xil_defaultlib.binToTimeBcd -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.bintotimebcd
+Built simulation snapshot binToTimeBcd_behav
