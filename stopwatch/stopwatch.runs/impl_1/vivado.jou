@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Dec  1 21:27:41 2018
-# Process ID: 14116
-# Current directory: F:/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1
+# Start of session at: Fri Dec  7 15:47:09 2018
+# Process ID: 12424
+# Current directory: C:/Users/djleg/Documents/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1
 # Command line: vivado.exe -log stopWatchTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopWatchTop.tcl -notrace
-# Log file: F:/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1/stopWatchTop.vdi
-# Journal file: F:/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1\vivado.jou
+# Log file: C:/Users/djleg/Documents/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1/stopWatchTop.vdi
+# Journal file: C:/Users/djleg/Documents/programmeerbareHardware1/stopwatch/stopwatch.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source stopWatchTop.tcl -notrace

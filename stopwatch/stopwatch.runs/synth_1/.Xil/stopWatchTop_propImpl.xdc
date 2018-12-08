@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/programmeerbareHardware1/stopwatch/stopwatch.srcs/constrs_1/new/pinplanner.xdc rfile:../../../stopwatch.srcs/constrs_1/new/pinplanner.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/djleg/Documents/programmeerbareHardware1/stopwatch/stopwatch.srcs/constrs_1/new/pinplanner.xdc rfile:../../../stopwatch.srcs/constrs_1/new/pinplanner.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U2 [get_ports {segmentSelect[0]}]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]

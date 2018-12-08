@@ -43,6 +43,7 @@ end Watch;
 
 architecture Behavioral of Watch is
     constant prescaler : unsigned(26 downto 0) := "101111101011110000100000000";
+    --constant prescaler : unsigned(26 downto 0) := "000000011001011011100110101";
     --constant prescaler : unsigned(26 downto 0) := "000000000000000000000010000";
     constant limit : unsigned(5 downto 0) := "111011";
 

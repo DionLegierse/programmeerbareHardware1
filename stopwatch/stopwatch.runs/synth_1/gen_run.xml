@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543696010">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1544193983">
   <File Type="PA-TCL" Name="stopWatchTop.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="stopWatchTop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="stopWatchTop_reports.tcl"/>

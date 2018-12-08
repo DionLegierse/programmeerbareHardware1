@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="F:/programmeerbareHardware1/stopwatch/stopwatch.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/djleg/Documents/programmeerbareHardware1/stopwatch/stopwatch.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8d04ae35f7c747f38a046a3f2ed6e1de"/>
