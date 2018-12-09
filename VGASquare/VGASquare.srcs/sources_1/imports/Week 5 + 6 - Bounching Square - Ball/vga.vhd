@@ -19,17 +19,17 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity VGA is
     Port (
-      clk25 : in STD_LOGIC;
-			redIn, greenIn, blueIn : in  std_logic_vector(3 downto 0);
-			redOut, greenOut, blueOut : out  std_logic_vector(3 downto 0);
-      x,y : out std_logic_vector(9 downto 0);
-			hsync, vsync : out  STD_LOGIC
+        clk25 : in STD_LOGIC;
+		redIn, greenIn, blueIn : in  std_logic_vector(3 downto 0);
+		redOut, greenOut, blueOut : out  std_logic_vector(3 downto 0);
+        nextX, nextY : out std_logic_vector(9 downto 0);
+		hsync, vsync : out  STD_LOGIC
     );
 end VGA;
 
 architecture Behavioral of VGA is
-  signal hcount: STD_LOGIC_VECTOR(9 downto 0);
-  signal vcount: STD_LOGIC_VECTOR(9 downto 0);
+  signal hcount: STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+  signal vcount: STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
 begin
 
   process (clk25)
@@ -37,12 +37,9 @@ begin
     if rising_edge(clk25) then
       if (hcount >= 144) and (hcount < 784) and (vcount >= 31) and (vcount < 511) then
         --visble area
-        x <= hcount - 145;
-        y <= vcount - 32;
-
         redOut <= redIn;
         greenOut <= greenIn;
-        blueOut <= blueOut;
+        blueOut <= blueIn;
       else
         --invisible area
         redOut <= (others => '0');
@@ -73,6 +70,18 @@ begin
 
       if vcount = 521 then
         vcount <= (others => '0');
+      end if;
+
+      if ((hcount - 144) >= 0) and ((hcount - 144) < 640) then
+          nextX <= (hcount - 143);
+      else
+          nextX <= (others => '0');
+      end if;
+
+      if ((vcount - 31) >= 0) and ((vcount - 31) < 480) then
+          nextY <= (vcount - 31);
+      else
+          nextY <= (others => '0');
       end if;
     end if;
   end process;

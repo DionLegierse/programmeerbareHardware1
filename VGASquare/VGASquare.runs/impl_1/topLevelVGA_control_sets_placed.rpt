@@ -1,0 +1,75 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sun Dec  9 13:34:41 2018
+| Host         : DESKTOP-24KCCOQ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file topLevelVGA_control_sets_placed.rpt
+| Design       : topLevelVGA
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    60 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               7 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              72 |           24 |
+| Yes          | No                    | No                     |              19 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              10 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+|       Clock Signal      |           Enable Signal           |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+|  clk_divider/inst/clk25 |                                   | vga_controller/ltOp             |                1 |              1 |
+|  clk_divider/inst/clk25 |                                   | vga_controller/vsync_i_1_n_0    |                1 |              1 |
+|  clk_divider/inst/clk25 |                                   |                                 |                5 |              7 |
+|  clk_divider/inst/clk25 | square_sprite/yCounter[8]_i_1_n_0 |                                 |                2 |              9 |
+|  clk_divider/inst/clk25 |                                   | vga_controller/nextX[9]_i_1_n_0 |                5 |             10 |
+|  clk_divider/inst/clk25 |                                   | vga_controller/sel              |                4 |             10 |
+|  clk_divider/inst/clk25 |                                   | vga_controller/nextY[9]_i_1_n_0 |                3 |             10 |
+|  clk_divider/inst/clk25 | vga_controller/sel                | vga_controller/clear            |                3 |             10 |
+|  clk_divider/inst/clk25 | square_sprite/xCounter[9]_i_1_n_0 |                                 |                4 |             10 |
+|  clk_divider/inst/clk25 |                                   | square_sprite/xMoveCounter0     |                5 |             20 |
+|  clk_divider/inst/clk25 |                                   | square_sprite/yMoveCounter0     |                5 |             20 |
++-------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 7      |                     1 |
+| 9      |                     1 |
+| 10     |                     5 |
+| 16+    |                     2 |
++--------+-----------------------+
+
+
