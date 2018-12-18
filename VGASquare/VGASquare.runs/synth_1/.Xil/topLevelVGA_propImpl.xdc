@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc rfile:../../../VGASquare.srcs/constrs_1/new/basys3vga.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc rfile:../../../VGASquare.srcs/constrs_1/new/basys3vga.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N18 [get_ports {blueOut[0]}]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]

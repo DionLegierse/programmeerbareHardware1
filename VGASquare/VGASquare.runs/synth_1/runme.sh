@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=F:/Xilinx/SDK/2017.4/bin;F:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:F:/Xilinx/Vivado/2017.4/bin
+  PATH=C:/Xilinx/SDK/2017.4/bin;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.4/bin
 else
-  PATH=F:/Xilinx/SDK/2017.4/bin;F:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:F:/Xilinx/Vivado/2017.4/bin:$PATH
+  PATH=C:/Xilinx/SDK/2017.4/bin;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/programmeerbareHardware1/VGASquare/VGASquare.runs/synth_1'
+HD_PWD='C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param simulator.modelsimInstallPath F:/Modeltech_pe_edu_10.4a/win32pe_edu
 set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -24,23 +23,23 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir F:/programmeerbareHardware1/VGASquare/VGASquare.cache/wt [current_project]
-set_property parent.project_path F:/programmeerbareHardware1/VGASquare/VGASquare.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.cache/wt [current_project]
+set_property parent.project_path C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo f:/programmeerbareHardware1/VGASquare/VGASquare.cache/ip [current_project]
+set_property ip_output_repo c:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/new/square.vhd
-  {F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd}
-  F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/new/topLevelVGA.vhd
+  C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/new/square.vhd
+  {C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd}
+  C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/new/topLevelVGA.vhd
 }
-read_ip -quiet F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all f:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all f:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all f:/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,8 +49,8 @@ set_property used_in_implementation false [get_files -all f:/programmeerbareHard
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc
-set_property used_in_implementation false [get_files F:/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc]
+read_xdc C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc
+set_property used_in_implementation false [get_files C:/Users/djleg/Documents/programmeerbareHardware1/VGASquare/VGASquare.srcs/constrs_1/new/basys3vga.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

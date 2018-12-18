@@ -83,7 +83,7 @@ begin
                 green <= (others => '1');
             else
                 red <= (others => '0');
-                blue <= (others => '0');
+                blue <= (others => '1');
                 green <= (others => '0');
             end if;
         end if;
